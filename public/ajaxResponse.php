@@ -2,12 +2,11 @@
 if(isset($url[1])):
 	if(isset($url[2])):
 		try{
-			var_dump($url);
-			die;
 			$controllerName = 'Controller\\'.ucfirst($url[1]).'Controller';
 			$controller = new $controllerName();
 			$field1 = isset($url[3])?$url[3]:null;
 			$field2 = isset($url[4])?$url[4]:null;
+			die($url[2]);
 			print $controller->$url[2]($field1,$field2);
 		}	catch(Exception $error) {
 			header('HTTP/1.0 404 Not found');
