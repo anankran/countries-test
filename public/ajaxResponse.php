@@ -6,7 +6,8 @@ if(isset($url[1])):
 			$controller = new $controllerName();
 			$field1 = isset($url[3])?$url[3]:null;
 			$field2 = isset($url[4])?$url[4]:null;
-			print $controller->$url[2][0]($field1,$field2);
+			$method = (string)$url[2];
+			print $controller->$method($field1,$field2);
 		}	catch(Exception $error) {
 			header('HTTP/1.0 404 Not found');
 		  exit($error->getMessage());
