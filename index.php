@@ -2,7 +2,7 @@
 session_start();
 
 if(file_exists('cache/countries.csv')):
-	if(date("F d Y H:i:s.",filemtime('cache/countries.csv')) <= date("Y/m/d h:i:s", strtotime("-30 minutes"))):
+	if(date("F d Y H:i:s.",filemtime('cache/countries.csv')) <= date("Y/m/d h:i:s", strtotime("-5 minutes"))):
 		require_once 'config/generateFile.php';
 	endif;
 else:
