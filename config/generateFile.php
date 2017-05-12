@@ -13,7 +13,6 @@ foreach($recordsArray as $key => $value):
 endforeach;
 
 ksort($orderedArray);
-
 $file = fopen('cache/countries.csv','w');
 
 foreach($orderedArray as $key => $value):
