@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('#button').on('click',function(){
     $(this).html('Loading...');
     $.ajax({
-      url: '/index.php?param=ajax/country/all',
+      url: '/ajax/country/all',
       dataType: "JSON",
       success: function(data){
         var newValue;
