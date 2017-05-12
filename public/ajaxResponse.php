@@ -10,7 +10,9 @@ if(isset($url[1])):
 			print $controller->$method($field1,$field2);
 		}	catch(Exception $error) {
 			header('HTTP/1.0 404 Not found');
-		  exit($error->getMessage());
+			print '<h1>Error!</h1>';
+			print $error->getMessage();
+		  exit;
 		}
 		exit;
 	else:
