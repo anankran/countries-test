@@ -3,7 +3,7 @@ $(document).ready(function(){
   $('#button').on('click',function(){
     $(this).html('Loading...');
     $.ajax({
-      url: 'http://arizona.local/index.php?param=ajax/country/all',
+      url: '/index.php?param=ajax/country/all',
       dataType: "JSON",
       success: function(data){
         var newValue;
@@ -27,7 +27,7 @@ $(document).ready(function(){
   });
 
   $('#export').on('click',function(){
-    window.open('http://arizona.local/cache/countries.csv');
+    window.open('/cache/countries.csv');
   });
 
 });
