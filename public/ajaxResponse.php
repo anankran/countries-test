@@ -6,8 +6,7 @@ if(class_exists($controllerName)):
 	$field2 = isset($url[4])?$url[4]:null;
 	$method = (string)$url[2];
 	if(method_exists($controller, $method) && is_callable(array($controller, $method))):
-		print $method;
-		//print $controller->$method($field1,$field2);
+		print $controller->$method($field1,$field2);
 	else:
 		header('HTTP/1.0 404 Not Found');
     print '<h1>Not Found!</h1>';
